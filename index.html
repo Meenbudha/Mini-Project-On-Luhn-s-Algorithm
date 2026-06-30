@@ -1,14 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Luhn Algorithm Validator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verify debit or credit cards in real-time using Luhn's algorithm. Dynamic card visualization, network brand auto-detection (Visa, Mastercard, Amex, Discover), and responsive design.">
+  <meta name="keywords" content="Luhn's Algorithm, Card Validator, Mod 10, Credit Card Validator, Real-time Validation">
+  <title>Luhn's Algorithm Card Validator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Enter Debit or Credit Card number:</h2>
-  <input type="text" id="cardInput" placeholder="Enter card number" />
-  <button onclick="validateCard()">Validate</button>
-  <p id="result"></p>
+  <main class="container">
+    <header>
+      <h1>Luhn's Card Validator</h1>
+      <p>Enter a card number to validate using Luhn's Mod 10 algorithm.</p>
+    </header>
+
+    <!-- Visual Card Widget -->
+    <section class="card-widget" id="cardWidget" aria-label="Visual Card Representation">
+      <div class="card-top">
+        <div class="card-chip" aria-hidden="true"></div>
+        <div class="card-brand" id="cardBrand">CARD</div>
+      </div>
+      <div class="card-number-display" id="cardNumberDisplay">•••• •••• •••• ••••</div>
+      <div class="card-bottom">
+        <div class="card-info-group">
+          <span class="card-label">Cardholder</span>
+          <span class="card-value" id="cardholderDisplay">VALUED CUSTOMER</span>
+        </div>
+        <div class="card-info-group">
+          <span class="card-label">Expires</span>
+          <span class="card-value">12/30</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Validation Form -->
+    <form class="validator-form" id="validatorForm" autocomplete="off" novalidate>
+      <div class="form-group">
+        <label for="cardInput">Card Number</label>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="cardInput" 
+            placeholder="0000 0000 0000 0000" 
+            maxlength="23" 
+            required 
+            aria-required="true"
+            aria-describedby="resultBox"
+          />
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="cardholderInput">Cardholder Name (Optional)</label>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="cardholderInput" 
+            placeholder="e.g. Jane Doe" 
+            maxlength="22"
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit" id="btnValidate">
+        Validate Card
+      </button>
+    </form>
+
+    <!-- Result Alert Box -->
+    <div class="result-box" id="resultBox" role="alert" aria-live="polite">
+      <span class="result-icon" id="resultIcon" aria-hidden="true"></span>
+      <span id="resultMessage"></span>
+    </div>
+  </main>
+
+  <footer>
+    <p>Read more about the <a href="https://en.wikipedia.org/wiki/Luhn_algorithm" target="_blank" rel="noopener noreferrer">Luhn's Algorithm</a>.</p>
+  </footer>
 
   <script src="luhnValidator.js"></script>
 </body>
