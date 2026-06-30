@@ -2,7 +2,7 @@
 
 A premium, interactive web application that validates credit and debit card numbers in real-time using the **Luhn Algorithm (Mod 10 Check)**. The user interface features a sleek, glassmorphic layout, live credit card card visualization, dynamic brand auto-detection, auto-formatting, and validation micro-animations.
 
-Live Preview URL: http://127.0.0.1:5500/index.html
+Live Preview URL: https://card-validator-five.vercel.app/
 
 ---
 
@@ -39,7 +39,7 @@ The **Luhn algorithm** (also known as the "Modulo 10" or "Mod 10" algorithm) is 
 
 * **Structure**: HTML5 (semantic layout, SEO-optimized tags)
 * **Styling**: Vanilla CSS3 (Custom radial background gradients, glassmorphism, CSS keyframe animations, responsive grid/flexbox)
-* **Behavior**: Plain Vanilla JavaScript (ES6+, DOM event listeners, regex-based brand detection)
+* **Behavior**: Plain Vanilla JavaScript
 
 ---
 
@@ -47,4 +47,4 @@ The **Luhn algorithm** (also known as the "Modulo 10" or "Mod 10" algorithm) is 
 
 1. Clone or download the repository workspace.
 2. Open [index.html](file:///d:/Projects/Mini-Project-On-Luhn-s-Algorithm/index.html) directly in any modern browser (Chrome, Firefox, Safari, Edge).
-3. Alternatively, launch the project using an extension like **Live Server** in VS Code (accessible on `http://127.0.0.1:5500/index.html` as listed in your environment).
+3. Alternatively, launch the project using an extension like **Live Server** in VS Code (accessible on `https://card-validator-five.vercel.app/` as listed in your environment).
